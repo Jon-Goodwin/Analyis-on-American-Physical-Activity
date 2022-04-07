@@ -1,9 +1,11 @@
 Analyis of CDC data on American Physical Activity.
 
 ## Summary:
+https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-American-C/8mrp-rmkw
 
+https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7
 
-
+https://www.cdc.gov/nccdphp/dnpao/data-trends-maps/help/npao_dtm/limitations-risks.html
 ## Organization:
 
 inputs/data contains the original datasets.

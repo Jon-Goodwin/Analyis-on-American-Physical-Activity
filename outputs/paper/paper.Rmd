@@ -1,72 +1,50 @@
 ---
-title: "Analysis of CDC Data on Physical Activity"
+title: "Analysis of Physical Activity Survey(2022)"
 author: 
   - Jonathan Goodwin
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "Water source and availability are important factors in determining the health and safety of a society. We obtain data regarding the activity of individuals of different states and age groups as well as their respective distance to a park. We find that citizens who live closer to parks are more likely to be physically active, and that younger citizens are more likely to be physically active then older ones. These findings have implications for the future development of public recreational structures."
+header-includes:
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
 output:
   bookdown::pdf_document2
 toc: FALSE
 bibliography: references.bib
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
+```{r setup, include=FALSE,warning = FALSE, message = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message= FALSE, fig.pos = 'H')
 library(tidyverse)
+library(kableExtra)
+library(reshape2)
 ```
 
-# Introduction
+# Introduction {#Intro}
 
-You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point). 
+ Physical activity is an important indicator for the health of the population of the United States. As well living near to a public recreational service like a park allows residents a more convenient place to excercise. We see that decreasing the distance to a park as well as giving more opportunity for residents to participate in activities like biking is associated with more physically active residents who meet the CDC's guidelines for strength and aerobic health.
 
+  We analyzed the sources of water for two subsets of the Jordan population, urban and rural residents. From Figure ###Reference### and Figure ###Reference###, we can see that both California is the state with the most active populace, and that New York is the state where residents most commonly walk and/or bike to work. We also see that more rural states like Nebraska and Alaska have the fewest people living near a park.
 
+  This information is relevant to the further development and enhancement of the recreational and physical activity of citizens of the United States as well as leader of respective states when developing cities. The data can help to identify populaces with particularly low activity reletive to the rest of the country as well as identify states that are lacking in public recreational support for its citizens.
 
-# Data
+  In section \@ref(Data) we talk about the process of gathering and analyzing the dataset and the variables. Then in section \@ref(Results) we discuss the implications of the dataset presented. Finally in section \@ref(Discussion) we discuss implications for the United States citizens, as well as the weakness of the study and the further investigation that may be useful to the topic of recreational activity support and physical activity in the United States.
 
-Our data is of penguins (Figure \@ref(fig:bills)).
+\newpage
 
-```{r bills, fig.cap="Bills of penguins", echo = FALSE}
-```
-
-Talk more about it.
-
-Also bills and their average (Figure \@ref(fig:billssssss)). (Notice how you can change the height and width so they don't take the whole page?)
-
-```{r billssssss, fig.cap="More bills of penguins", echo = FALSE, fig.width=8, fig.height=4}
-
-```
-
-Talk way more about it. 
+# Data {#Data}
 
 
-
-# Model
-
+# Results {#Results}
 
 
-Equation \@ref(eq:bayes) seems useful, eh?
+# Discussion {#Discussion}
 
-Here's a dumb example of how to use some references: In paper we run our analysis in `R` [@citeR]. We also use the `tidyverse` which was written by @thereferencecanbewhatever If we were interested in baseball data then @citeLahman could be useful. 
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
+## FirstPoint {#FirstPoint}
 
 
-# Results
-
-# Discussion
-
-## First discussion point
-
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
-
-## Second discussion point
-
-## Third discussion point
 
 ## Weaknesses and next steps
 
-Weaknesses and next steps should also be included.
 
 \newpage
 
@@ -74,13 +52,14 @@ Weaknesses and next steps should also be included.
 
 # Appendix {-}
 
+## DataSheet {-}
 
-# Additional details
 
+## Code {-}
+
+Repository associated with this analysis is available at [github](https://github.com/Jon-Goodwin/Final)
 
 \newpage
 
 
 # References
-
-
