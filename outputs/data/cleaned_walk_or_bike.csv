@@ -1,0 +1,531 @@
+"","YearEnd","LocationDesc","Question","Data_Value"
+"1",2011,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"2",2016,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",6.5
+"3",2012,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"4",2011,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"5",2015,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"6",2016,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"7",2016,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",3.9
+"8",2014,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",2
+"9",2019,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"10",2018,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.4
+"11",2014,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"12",2010,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.4
+"13",2011,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4.5
+"14",2017,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"15",2016,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"16",2017,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"17",2013,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",5.5
+"18",2019,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"19",2012,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"20",2019,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"21",2015,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",5
+"22",2015,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"23",2010,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"24",2018,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"25",2012,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"26",2014,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"27",2017,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",17.7
+"28",2018,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"29",2019,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2
+"30",2016,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"31",2013,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4.6
+"32",2010,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"33",2017,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"34",2017,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"35",2014,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.3
+"36",2012,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"37",2019,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"38",2018,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"39",2016,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"40",2012,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",7.1
+"41",2013,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",4.3
+"42",2017,"New York","Percent of adults in the state who usually biked or walked to work in the last week",6.9
+"43",2013,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",6.8
+"44",2010,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"45",2017,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"46",2010,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.8
+"47",2015,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"48",2015,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"49",2012,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"50",2018,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"51",2010,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",2
+"52",2010,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"53",2014,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"54",2017,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"55",2010,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",5.3
+"56",2010,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"57",2013,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"58",2018,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"59",2019,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"60",2013,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",9.8
+"61",2012,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4.7
+"62",2016,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",6.9
+"63",2016,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"64",2013,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",2
+"65",2018,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"66",2012,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",4.2
+"67",2013,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"68",2010,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"69",2017,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"70",2010,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"71",2011,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",4
+"72",2015,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"73",2017,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",1.8
+"74",2016,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"75",2012,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"76",2014,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"77",2015,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"78",2018,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.5
+"79",2015,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.2
+"80",2015,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",4
+"81",2011,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"82",2014,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.5
+"83",2010,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"84",2018,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"85",2018,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"86",2019,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"87",2012,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"88",2013,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"89",2018,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4.6
+"90",2013,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"91",2013,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",4.2
+"92",2013,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",5.4
+"93",2014,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"94",2019,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",17.4
+"95",2018,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.2
+"96",2014,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",5.8
+"97",2012,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"98",2019,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"99",2016,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"100",2011,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"101",2016,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"102",2016,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",3
+"103",2012,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",4
+"104",2017,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",6
+"105",2015,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",4
+"106",2011,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",15
+"107",2014,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"108",2015,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"109",2018,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",2
+"110",2012,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",6.4
+"111",2017,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"112",2011,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"113",2012,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"114",2017,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"115",2012,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"116",2014,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"117",2019,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"118",2010,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",9.2
+"119",2012,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"120",2019,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"121",2019,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3
+"122",2015,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",6.6
+"123",2011,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",5.3
+"124",2013,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",6.2
+"125",2015,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"126",2015,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"127",2014,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",5.7
+"128",2018,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"129",2010,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"130",2014,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"131",2011,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"132",2017,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2
+"133",2012,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",5.9
+"134",2019,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"135",2018,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"136",2017,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",2
+"137",2019,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",4
+"138",2011,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"139",2013,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"140",2017,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.8
+"141",2014,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",17
+"142",2016,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3
+"143",2011,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.2
+"144",2016,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"145",2015,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"146",2014,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"147",2016,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"148",2010,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"149",2010,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",6.1
+"150",2017,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",8.2
+"151",2017,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",5.7
+"152",2015,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"153",2011,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"154",2015,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",4
+"155",2013,"New York","Percent of adults in the state who usually biked or walked to work in the last week",7.1
+"156",2017,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"157",2011,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"158",2015,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"159",2010,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",5.3
+"160",2012,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"161",2013,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"162",2010,"New York","Percent of adults in the state who usually biked or walked to work in the last week",6.7
+"163",2011,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",4.3
+"164",2018,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"165",2014,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"166",2019,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"167",2014,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",3.9
+"168",2013,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",6.4
+"169",2016,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4.2
+"170",2011,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"171",2018,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"172",2011,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.5
+"173",2016,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",5.4
+"174",2019,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"175",2018,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"176",2019,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"177",2018,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"178",2016,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"179",2015,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"180",2014,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"181",2019,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"182",2015,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",5.2
+"183",2012,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"184",2017,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"185",2010,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"186",2013,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"187",2017,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"188",2011,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.2
+"189",2016,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",5.8
+"190",2013,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"191",2012,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4.2
+"192",2017,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"193",2019,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"194",2012,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",8.5
+"195",2016,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"196",2018,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",6.5
+"197",2014,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.6
+"198",2019,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",5.2
+"199",2012,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"200",2014,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"201",2016,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",5.7
+"202",2011,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.8
+"203",2013,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"204",2018,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",5.4
+"205",2019,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"206",2019,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"207",2014,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"208",2011,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",5
+"209",2017,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"210",2019,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",5.7
+"211",2018,"New York","Percent of adults in the state who usually biked or walked to work in the last week",6.7
+"212",2013,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"213",2010,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"214",2012,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"215",2010,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",4.5
+"216",2017,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"217",2019,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",5.4
+"218",2012,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"219",2011,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"220",2012,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"221",2016,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2
+"222",2014,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"223",2011,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"224",2014,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"225",2010,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"226",2013,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"227",2016,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"228",2013,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"229",2019,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"230",2015,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"231",2017,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"232",2015,"New York","Percent of adults in the state who usually biked or walked to work in the last week",7
+"233",2017,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"234",2016,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"235",2019,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"236",2012,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"237",2013,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"238",2010,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"239",2010,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2
+"240",2012,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"241",2014,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",4.5
+"242",2010,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"243",2018,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",9
+"244",2015,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"245",2011,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",5.7
+"246",2013,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",5.6
+"247",2015,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"248",2010,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"249",2018,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"250",2012,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4.7
+"251",2012,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",4.9
+"252",2013,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"253",2017,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",4.7
+"254",2013,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"255",2017,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"256",2010,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"257",2010,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.3
+"258",2015,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",5.8
+"259",2015,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",7.2
+"260",2017,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.3
+"261",2012,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",3.9
+"262",2015,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"263",2013,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"264",2014,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",6
+"265",2010,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"266",2017,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"267",2011,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"268",2017,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"269",2010,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"270",2018,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",6
+"271",2017,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",6.4
+"272",2012,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.3
+"273",2015,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"274",2012,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",7.1
+"275",2019,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",5.9
+"276",2010,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"277",2018,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"278",2016,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"279",2014,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.5
+"280",2013,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"281",2016,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",3
+"282",2011,"New York","Percent of adults in the state who usually biked or walked to work in the last week",7.1
+"283",2016,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",8.6
+"284",2013,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"285",2017,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4.3
+"286",2013,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"287",2012,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"288",2014,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"289",2015,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"290",2017,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3
+"291",2011,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"292",2014,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",4
+"293",2014,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"294",2016,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.4
+"295",2018,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"296",2011,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"297",2010,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"298",2014,"New York","Percent of adults in the state who usually biked or walked to work in the last week",6.9
+"299",2019,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"300",2019,"New Mexico","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"301",2010,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",4.2
+"302",2018,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"303",2011,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",2
+"304",2015,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",6.3
+"305",2018,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"306",2013,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.3
+"307",2013,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"308",2017,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"309",2019,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"310",2016,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"311",2016,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.6
+"312",2011,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"313",2015,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"314",2012,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"315",2015,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"316",2011,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",6.2
+"317",2019,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"318",2019,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"319",2011,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"320",2014,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"321",2014,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"322",2012,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.5
+"323",2013,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"324",2011,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",8.6
+"325",2016,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"326",2018,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",5.9
+"327",2019,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.5
+"328",2012,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.8
+"329",2017,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",3
+"330",2015,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"331",2018,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"332",2014,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",5.8
+"333",2017,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"334",2015,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"335",2012,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"336",2015,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2
+"337",2014,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"338",2010,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"339",2014,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",2
+"340",2019,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"341",2018,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"342",2018,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"343",2014,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"344",2011,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"345",2013,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",18.1
+"346",2010,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"347",2018,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.6
+"348",2019,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"349",2017,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"350",2019,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",7.8
+"351",2011,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",4.3
+"352",2014,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4.6
+"353",2013,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"354",2019,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"355",2015,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",9
+"356",2019,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"357",2016,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.5
+"358",2012,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"359",2016,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",2
+"360",2018,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2
+"361",2013,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",5
+"362",2012,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",4.3
+"363",2010,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3
+"364",2019,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"365",2011,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"366",2015,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",3
+"367",2010,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"368",2015,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"369",2012,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.4
+"370",2017,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"371",2011,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"372",2016,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"373",2017,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",5.7
+"374",2014,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",4
+"375",2015,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",1.8
+"376",2010,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"377",2011,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"378",2013,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"379",2013,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"380",2013,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"381",2016,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"382",2018,"Kentucky","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"383",2010,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",3
+"384",2016,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",5.2
+"385",2019,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"386",2018,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",3.9
+"387",2012,"Massachusetts","Percent of adults in the state who usually biked or walked to work in the last week",5.7
+"388",2016,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"389",2018,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"390",2016,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",3.9
+"391",2010,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"392",2016,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"393",2012,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"394",2010,"Hawaii","Percent of adults in the state who usually biked or walked to work in the last week",5.4
+"395",2011,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4
+"396",2013,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"397",2017,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"398",2015,"Washington","Percent of adults in the state who usually biked or walked to work in the last week",4.7
+"399",2018,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"400",2012,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"401",2019,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"402",2010,"South Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4.9
+"403",2014,"Oregon","Percent of adults in the state who usually biked or walked to work in the last week",6.6
+"404",2018,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"405",2014,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"406",2018,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",6.7
+"407",2011,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"408",2016,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"409",2011,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"410",2018,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"411",2013,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.6
+"412",2019,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",5.8
+"413",2019,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"414",2011,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"415",2011,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"416",2016,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"417",2019,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"418",2011,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.9
+"419",2010,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"420",2015,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"421",2010,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",6.3
+"422",2014,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"423",2012,"Wyoming","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"424",2016,"New York","Percent of adults in the state who usually biked or walked to work in the last week",6.9
+"425",2017,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4.6
+"426",2013,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"427",2013,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.1
+"428",2012,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",16
+"429",2017,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"430",2013,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"431",2012,"New York","Percent of adults in the state who usually biked or walked to work in the last week",7
+"432",2017,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",6.4
+"433",2010,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"434",2010,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",14.9
+"435",2011,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"436",2015,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"437",2012,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"438",2016,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.3
+"439",2017,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"440",2014,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.8
+"441",2014,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"442",2018,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2
+"443",2019,"New York","Percent of adults in the state who usually biked or walked to work in the last week",6.9
+"444",2013,"Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3
+"445",2014,"Connecticut","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"446",2015,"Delaware","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"447",2017,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"448",2016,"Nebraska","Percent of adults in the state who usually biked or walked to work in the last week",3.1
+"449",2011,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"450",2016,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"451",2015,"Michigan","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"452",2012,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"453",2015,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",4
+"454",2018,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"455",2015,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"456",2018,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",17.6
+"457",2017,"Pennsylvania","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"458",2010,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"459",2013,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"460",2014,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"461",2012,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"462",2010,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",3
+"463",2010,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",3.9
+"464",2017,"North Carolina","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"465",2013,"New Jersey","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"466",2013,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.6
+"467",2010,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4.2
+"468",2017,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"469",2015,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",18.1
+"470",2019,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.5
+"471",2015,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",3.2
+"472",2013,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",4.3
+"473",2016,"District of Columbia","Percent of adults in the state who usually biked or walked to work in the last week",18.3
+"474",2019,"Alabama","Percent of adults in the state who usually biked or walked to work in the last week",1.3
+"475",2014,"National","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"476",2014,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"477",2010,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"478",2015,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"479",2012,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"480",2012,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"481",2016,"Minnesota","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"482",2019,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",1.8
+"483",2015,"Arkansas","Percent of adults in the state who usually biked or walked to work in the last week",1.9
+"484",2016,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"485",2011,"Montana","Percent of adults in the state who usually biked or walked to work in the last week",6.1
+"486",2013,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"487",2018,"Illinois","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"488",2018,"West Virginia","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"489",2017,"Nevada","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"490",2011,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"491",2015,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"492",2017,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.4
+"493",2017,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.4
+"494",2018,"Puerto Rico","Percent of adults in the state who usually biked or walked to work in the last week",2.4
+"495",2016,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"496",2018,"Colorado","Percent of adults in the state who usually biked or walked to work in the last week",4.2
+"497",2019,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"498",2018,"North Dakota","Percent of adults in the state who usually biked or walked to work in the last week",3.6
+"499",2012,"Missouri","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"500",2010,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",6.1
+"501",2010,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"502",2011,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",3.3
+"503",2013,"Rhode Island","Percent of adults in the state who usually biked or walked to work in the last week",4.6
+"504",2011,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",4
+"505",2011,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2.1
+"506",2013,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"507",2015,"Idaho","Percent of adults in the state who usually biked or walked to work in the last week",4
+"508",2018,"Louisiana","Percent of adults in the state who usually biked or walked to work in the last week",2.3
+"509",2019,"Mississippi","Percent of adults in the state who usually biked or walked to work in the last week",1.2
+"510",2016,"Wisconsin","Percent of adults in the state who usually biked or walked to work in the last week",3.7
+"511",2011,"Oklahoma","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"512",2014,"Alaska","Percent of adults in the state who usually biked or walked to work in the last week",8.9
+"513",2014,"South Carolina","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"514",2014,"Iowa","Percent of adults in the state who usually biked or walked to work in the last week",3.9
+"515",2014,"California","Percent of adults in the state who usually biked or walked to work in the last week",3.9
+"516",2019,"Florida","Percent of adults in the state who usually biked or walked to work in the last week",2.2
+"517",2016,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4.4
+"518",2012,"Kansas","Percent of adults in the state who usually biked or walked to work in the last week",2.5
+"519",2018,"Texas","Percent of adults in the state who usually biked or walked to work in the last week",1.7
+"520",2016,"Ohio","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"521",2011,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",3
+"522",2015,"Tennessee","Percent of adults in the state who usually biked or walked to work in the last week",1.3
+"523",2017,"Arizona","Percent of adults in the state who usually biked or walked to work in the last week",2.8
+"524",2019,"Indiana","Percent of adults in the state who usually biked or walked to work in the last week",2.7
+"525",2014,"Georgia","Percent of adults in the state who usually biked or walked to work in the last week",1.8
+"526",2019,"Maine","Percent of adults in the state who usually biked or walked to work in the last week",4.1
+"527",2018,"New Hampshire","Percent of adults in the state who usually biked or walked to work in the last week",2.9
+"528",2016,"Utah","Percent of adults in the state who usually biked or walked to work in the last week",3.4
+"529",2014,"Maryland","Percent of adults in the state who usually biked or walked to work in the last week",2.6
+"530",2011,"Vermont","Percent of adults in the state who usually biked or walked to work in the last week",7.1
