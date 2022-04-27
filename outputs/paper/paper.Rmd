@@ -23,6 +23,7 @@ library(reshape2)
 set.seed(1)
 Data <- 
   read.csv(here::here("outputs/data/cleaned_physical_activity.csv"))
+Data1 <- read.csv(here::here("outputs/data/cleaned_walk_or_bike.csv"))
 ```
 
 # Keywords: 
@@ -32,11 +33,14 @@ Health, Physical Activity, Recreation, United States, Survey
 
  Physical activity is an important indicator for the health of the population of the United States. As well living near to a public recreational service like a park allows residents a more convenient place to excercise. We see that decreasing the distance to a park as well as giving more opportunity for residents to participate in activities like biking is associated with more physically active residents who meet the CDC's guidelines for strength and aerobic health.
 
-  We analyzed the sources of water for two subsets of the Jordan population, urban and rural residents. From Figure ###Reference### and Figure ###Reference###, we can see that both California is the state with the most active populace, and that New York is the state where residents most commonly walk and/or bike to work. We also see that more rural states like Nebraska and Alaska have the fewest people living near a park.
+  We analyzed the sources of water for two subsets of the Jordan population, urban and rural residents. From Table \@ref(tab:tab2) and Table \@ref(tab:tab3), we can see that both Colorado is the state with the lowest rate of obesity and that Mississipi is the highest. 
 
   This information is relevant to the further development and enhancement of the recreational and physical activity of citizens of the United States as well as leader of respective states when developing cities. The data can help to identify populaces with particularly low activity reletive to the rest of the country as well as identify states that are lacking in public recreational support for its citizens.
+  
+  Overall we found that the state with the highest rates of Obesity was Mississipi, the lowest was Colorado and that there is a relationship between the proportion of state residents participating in recreational activities like muscle training or aerobics and the obesity rate of residents within that state.
 
   In section \@ref(Data) we talk about the process of gathering and analyzing the dataset and the variables. Then in section \@ref(Results) we discuss the implications of the dataset presented. Finally in section \@ref(Discussion) we discuss implications for the United States citizens, as well as the weakness of the study and the further investigation that may be useful to the topic of recreational activity support and physical activity in the United States.
+  
 
 \newpage
 
@@ -44,7 +48,7 @@ Health, Physical Activity, Recreation, United States, Survey
 
   The dataset is from the National Health Interview Survey. The survey was conducted by the Centers for Disease Control and Prevention, [@citeCDC] and the data used was from the years 2010 to 2020.The survey was conducted and funded by the CDC but also has numerous sponsors found [here](https://www.cdc.gov/nchs/nhis/supplements_cosponsors.htm).
 
-  The survey has been conducted every year for over 50 years, the sample is nationally representative, the intent of the survey is to monitor the health of the nation, as it collects information by interviewing American households. The content of the survey is updated roughly every 15-20 years with the most recent being in 2019. Of which 30,000 adults and 9,000 children were interviewed. Of this survey, this analysis focused on the information regarding the proportion of adults classified as obese or overweight, and how they responded to questions regarding aerobic activity and weight training. The data is collected from all 50 states including the District of Columbia and Peurto Rico, there is also a section included for the National averages of each question response.
+  The survey has been conducted every year for over 50 years, the sample is nationally representative, the intent of the survey is to monitor the health of the nation, as it collects information by interviewing American households. The content of the survey is updated roughly every 15-20 years with the most recent being in 2019. Of which 30,000 adults and 9,000 children were interviewed. Of this survey, this analysis focused on the information regarding the proportion of adults classified as obese or overweight, and how they responded to questions regarding aerobic activity and weight training. The data is collected from all 50 states including the District of Columbia, there is also a section included for the National averages of each question response.
   
   To compile the data set, the R language was used[@citeR], along with the packages, Pointblank [@citepointblank], haven [@citehaven], the paper was compiled using Knitr [@citeknitr] and KableExtra[@citeakableExtra] packages. Also made use of reshape2 [@citereshape2] in manipulating the data to create plots.
   
@@ -79,6 +83,105 @@ The responses are given as a proportion of the sample, rounded to 1 digit. So th
 \newpage
 
 # Model {#Model}
+
+  The model being used is $\text{Obesity}=\beta_{\text{Intercept}}+\beta_{\text{150min of Aerobics}}\times (\text{150min of Aerobics or more})+\beta_{\text{Muscle Training}}\times (\text{Muscle Training})$. Where the beta coefficients represent the change in the predictor variables, 150min or more of Aerobics, and Muscle Training, have on the result, being the obesity rate. This model was chosen since other factors like no aerobic activity or 300min or more of aerobic activity were unsuprisingly highly correlated with the 150min of aerobics.
+  
+  Figure \@ref(fig:fig5) shows the relationship between 150min of Aerobics training and Muscle Training compared to the rate of Obesity.
+
+
+```{r fig5, echo = FALSE, fig.cap = "Obesity vs 150min of Aerobics", fig.width=5,fig.height=5}
+### Obesity Rate by State 2011 ###
+df1 <- subset(df, Year == 2011)
+df1 <- subset(df1, Question == "Percent of adults aged 18 years and older who have obesity")
+df1 <- df1[order(df1$State),]
+x <- c()
+i = 1
+while (i < 312) {
+  y = mean(c(df1[i,4],df1[i+1,4],df1[i+2,4],df1[i+3,4],df1[i+4,4],df1[i+5,4]))
+  x <- c(x,y)
+  i = i+6
+}
+df_means <- cbind(unique(df1$Year),unique(df1$State), unique(df1$Question), round(x, digits = 1))
+df_means <- as.data.frame(df_means)
+
+###### Forming dataframe for no aerobic activity
+
+df_no_leisure <- subset(df, Year == 2011)
+df_no_leisure <- subset(df_no_leisure, Question == "Percent of adults who engage in no leisure-time physical activity")
+df_no_leisure <- df_no_leisure[order(df_no_leisure$State),]
+x <- c()
+i = 1
+while (i < 312) {
+  y = mean(c(df_no_leisure[i,4],df_no_leisure[i+1,4],df_no_leisure[i+2,4],df_no_leisure[i+3,4],df_no_leisure[i+4,4],df_no_leisure[i+5,4]))
+  x <- c(x,y)
+  i = i+6
+}
+df_means_no <- cbind(unique(df_no_leisure$Year),unique(df_no_leisure$State), unique(df_no_leisure$Question), round(x, digits = 1))
+df_means_no <- as.data.frame(df_means_no)
+
+### Forming dataframe for >150min aerobic activity
+
+df_150 <- subset(df, Year == 2011)
+df_150 <- subset(df_150, Question == "Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)")
+df_150 <- df_150[order(df_150$State),]
+x <- c()
+i = 1
+while (i < 312) {
+  y = mean(c(df_150[i,4],df_150[i+1,4],df_150[i+2,4],df_150[i+3,4],df_150[i+4,4],df_150[i+5,4]))
+  x <- c(x,y)
+  i = i+6
+}
+df_means_150 <- cbind(unique(df_150$Year),unique(df_150$State), unique(df_150$Question), round(x, digits = 1))
+df_means_150 <- as.data.frame(df_means_150)
+### Dataframe for muscle strengthening
+df_muscle <- subset(df, Year == 2011)
+df_muscle <- subset(df_muscle, Question == "Percent of adults who engage in muscle-strengthening activities on 2 or more days a week")
+df_muscle <- df_muscle[order(df_muscle$State),]
+x <- c()
+i = 1
+while (i < 312) {
+  y = mean(c(df_muscle[i,4],df_muscle[i+1,4],df_muscle[i+2,4],df_muscle[i+3,4],df_muscle[i+4,4],df_muscle[i+5,4]))
+  x <- c(x,y)
+  i = i+6
+}
+df_means_muscle <- cbind(unique(df_muscle$Year),unique(df_muscle$State), unique(df_muscle$Question), round(x, digits = 1))
+df_means_muscle <- as.data.frame(df_means_muscle)
+
+### Dataframe for >300min of aerobic activity
+
+df_300 <- subset(df, Year == 2011)
+df_300 <- subset(df_300, Question == "Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)")
+df_300 <- df_300[order(df_300$State),]
+x <- c()
+i = 1
+while (i < 312) {
+  y = mean(c(df_300[i,4],df_300[i+1,4],df_300[i+2,4],df_300[i+3,4],df_300[i+4,4],df_300[i+5,4]))
+  x <- c(x,y)
+  i = i+6
+}
+df_means_300 <- cbind(unique(df_300$Year),unique(df_300$State), unique(df_300$Question), round(x, digits = 1))
+df_means_300 <- as.data.frame(df_means_300)
+
+### Linear Model
+
+dat.m <- as.data.frame(cbind(df_means$V4,df_means_no$V4,df_means_300$V4,df_means_150$V4,df_means_muscle$V4))
+names(dat.m)[names(dat.m) == 'V1'] <- "Obesity"
+names(dat.m)[names(dat.m) == 'V2'] <- "No"
+names(dat.m)[names(dat.m) == 'V3'] <- "300mins"
+names(dat.m)[names(dat.m) == 'V4'] <- "150min"
+names(dat.m)[names(dat.m) == 'V5'] <- "Muscle"
+Obesity <- as.numeric(as.vector(dat.m$Obesity))
+No_Aerobics <- as.numeric(as.vector(dat.m$No))
+Aerobics_300min <- as.numeric(as.vector(dat.m$`300mins`))
+Aerobics_150min <- as.numeric(as.vector(dat.m$`150min`))
+Muscle <- as.numeric(as.vector(dat.m$Muscle))
+mod1 <- lm(Obesity~Aerobics_150min+Muscle)
+ggplot(mapping = aes(x = Aerobics_150min, y = Obesity))+geom_point()+xlab("150min or more of Aerobics") +
+  ylab("Obesity Rate")
+```
+
+
+
 
 
 \newpage
@@ -169,7 +272,7 @@ df.means4 <- df_m[order(df_m$V4),]
 names(df.means4)[names(df.means4) == 'V2'] <- 'State'
 names(df.means4)[names(df.means4) == 'V4'] <- 'Proportion'
 df.new4 <- cbind(df.means4$State,df.means4$Proportion)
-knitr::kable(head(df.new4),booktabs = TRUE, align = "c", caption = "Excerpt of Chart 2") %>% 
+knitr::kable(head(df.new4),booktabs = TRUE, align = "c", caption = "Excerpt of Figure 1") %>% 
 kable_styling(full_width = F) %>%
 kable_styling(latex_options = "HOLD_position")
 ```
