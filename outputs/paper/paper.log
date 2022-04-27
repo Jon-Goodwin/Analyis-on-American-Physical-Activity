@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.18)  27 APR 2022 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.18)  27 APR 2022 01:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -554,11 +554,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 118.
 (c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-LaTeX Warning: Reference `Discussion' on page 1 undefined on input line 136.
-
-[1
+) [1
 
 {c:/Users/johng/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -568,7 +564,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 155.
 
-Overfull \hbox (73.16217pt too wide) in paragraph at lines 155--168
+Overfull \hbox (72.3568pt too wide) in paragraph at lines 155--168
  [][] 
  []
 
@@ -595,50 +591,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--185
 [2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.193 \section{Model}\label{Model}}
-                                   ]
-
-LaTeX Warning: Reference `fig:fig1' on page 3 undefined on input line 198.
-
-<paper_files/figure-latex/fig1-1.pdf, id=79, 469.755pt x 325.215pt>
+l.192 \newpage
+              ] [3] [4]
+<paper_files/figure-latex/fig1-1.pdf, id=93, 578.16pt x 578.16pt>
 File: paper_files/figure-latex/fig1-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/fig1-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/fig1-1.pdf  used on input line 200.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+Package pdftex.def Info: paper_files/figure-latex/fig1-1.pdf  used on input line 206.
+(pdftex.def)             Requested size: 469.75385pt x 469.75385pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--202
-[][]
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3 <./paper_files/figure-latex/fig1-1.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 232.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.249 \newpage
+               <./paper_files/figure-latex/fig1-1.pdf>] [6pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.260 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.260 \newpage
+              ]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 283.
 (c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [4] [5]
-Overfull \hbox (38.3816pt too wide) in paragraph at lines 446--447
+) [7] [8]
+Overfull \hbox (38.3816pt too wide) in paragraph at lines 497--498
 []\T1/lmr/m/n/10 NHIS sur-veys are ap-proved and re-view by the ICF In-sti-tu-tional Re-view Board( IRB).(\T1/lmr/bx/n/10 citeDHS_Ethics?\T1/lmr/m/n/10 ). 
  []
 
-[6] [7] [8] [9] [10] (./paper.aux)
-
-LaTeX Warning: There were undefined references.
-
+[9] [10] [11] [12] [13] (./paper.aux)
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: A6FB9A60D3BDD47F8C704BC95965B606;1051.
+(rerunfilecheck)             Checksum: BA23F8298A3F2C0323D2CB66455BB5A9;1145.
  ) 
 Here is how much of TeX's memory you used:
- 12792 strings out of 480236
- 202121 string characters out of 5894214
- 495017 words of memory out of 5000000
- 30393 multiletter control sequences out of 15000+600000
+ 12805 strings out of 480236
+ 202239 string characters out of 5894214
+ 495179 words of memory out of 5000000
+ 30398 multiletter control sequences out of 15000+600000
  525271 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,9n,63p,809b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/johng/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on paper.pdf (10 pages, 251834 bytes).
+Output written on paper.pdf (13 pages, 252812 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 105 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 290 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

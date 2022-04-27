@@ -76,16 +76,21 @@ These are stratified into 6 different age groups for adults, those 18-24, 25-34,
 
 The responses are given as a proportion of the sample, rounded to 1 digit. So the value 35.2 means, 35.2% of respondents in that age group had been affirmative to that trait in the survey.
 
+\newpage
+
 # Model {#Model}
 
 ```{r model, echo = FALSE, fig.pos = 'H'}
 
 ```
+
+\newpage
+
 # Results {#Results}
 
-  From Figure \@ref(fig:fig1) we see a chart comparing the proportion of respondents who were obese based on the different states in the country. From this table we see that the vast majority of residents from both populations receive their water via a pipe directly into their residence. This is a positive as it means these people have quick and direct access to a water source.
+  From Figure \@ref(fig:fig1) we see a chart comparing the proportion of respondents who were obese based on the different states in the country. We can see from the chart that all states lie between a rate of 20% and 35% obese.
 
-```{r fig1, echo = FALSE, fig.cap = "Bar plot of Obesity by State"}
+```{r fig1, echo = FALSE, fig.cap = "Bar plot of Obesity by State", fig.width=8,fig.height=8}
 ### Bar plot of Obesity by State ###
 df1 <- subset(df, Year == 2011)
 df2 <- subset(df, Year == 2020)
@@ -100,13 +105,45 @@ while (i < 312) {
 }
 df_means <- cbind(unique(df1$Year),unique(df1$State), unique(df1$Question), round(x, digits = 1))
 df_means <- as.data.frame(df_means)
-df_long <- melt(df_means)
-p <- ggplot(df_long, aes(x = V2, y = V4)) + geom_bar(stat = "identity", position = "dodge") +
+df_long <- melt(df_means[order(df_means$V4),])
+p <- ggplot(df_long, aes(x = V2, y = as.numeric(V4), fill = V4)) +scale_y_continuous(limits = c(0,35)) + theme(legend.position="none", axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=0)) + geom_bar(width = 0.8, stat = "identity", position = 'dodge') +
   xlab("State") +
   ylab("Percent of Population")
 
 p + coord_flip()
 ```
+
+Below Table \@ref(tab:tab2), shows the states with the lowest proportions of obesity.
+
+```{r tab2, echo = FALSE, fig.pos = 'H'}
+### Buidling Excerpt ###
+df.means2 <- df_means[order(df_means$V4),]
+names(df.means2)[names(df.means2) == 'V2'] <- 'State'
+names(df.means2)[names(df.means2) == 'V4'] <- 'Proportion'
+df.new <- cbind(df.means2$State,df.means2$Proportion)
+knitr::kable(head(df.new),booktabs = TRUE, align = "c", caption = "Excerpt of dataset") %>% 
+kable_styling(full_width = F) %>%
+kable_styling(latex_options = "hold_position")
+```
+
+
+And here Table \@ref(tab:tab3) gives the 6 states with the highest obesity rates.
+
+
+```{r tab3, echo = FALSE, fig.pos = 'H'}
+### Buidling Excerpt ###
+df.means3 <- df_means[order(df_means$V4, decreasing = T),]
+names(df.means3)[names(df.means3) == 'V2'] <- 'State'
+names(df.means3)[names(df.means3) == 'V4'] <- 'Proportion'
+df.new2 <- cbind(df.means2$State,df.means2$Proportion)
+knitr::kable(tail(df.new2),booktabs = TRUE, align = "c", caption = "Excerpt of dataset") %>% 
+kable_styling(full_width = F) %>%
+kable_styling(latex_options = "hold_position")
+```
+
+The tables show that the the 
+\newpage
+
 # Discussion {#Discussion}
 
 ## FirstPoint {#FirstPoint}

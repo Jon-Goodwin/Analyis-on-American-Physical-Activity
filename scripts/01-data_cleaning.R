@@ -27,9 +27,10 @@ df2 <- df[Columns1]
 df2 <- na.omit(df2)
 df2 <- subset(df2, LocationDesc != "Guam")
 df2 <- subset(df2, LocationDesc != "Virgin Islands")
-df2 <- subset(df2, LocationDesc != "Peurto Rico")
+df2 <- subset(df2, LocationDesc != "Puerto Rico")
 
 
 ### Write csv ###
 write.csv(x=df1, file = "cleaned_walk_or_bike.csv")
 write.csv(x=df2, file = "cleaned_physical_activity.csv")
+
