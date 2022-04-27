@@ -1,11 +1,9 @@
 Analyis of CDC data on American Physical Activity.
 
 ## Summary:
-https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-American-C/8mrp-rmkw
+An analysis of the responses to the National Health Interview Survey regarding physical activity and fitness across the United States.
 
-https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7
-
-https://www.cdc.gov/nccdphp/dnpao/data-trends-maps/help/npao_dtm/limitations-risks.html
+Raw data relevant to the survey was found [here](https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7)
 ## Organization:
 
 inputs/data contains the original datasets.
@@ -17,15 +15,10 @@ outputs/paper contains the paper and bibiliography.
 scripts contains all the scripts relating to cleaning and organizing the dataset
 
 ### Step 1 ###
-Simulated a dataset based on table 2.7.
-
-Read PDF from DHS into R and converted table on page 32 of
-the Jordan Population and Family Health Survey into a raw_data file.
-
+Simulated a dataset based on the CDC survey.
 
 ### Step 2 ###
-Cleaned raw data file.
-Tested cleaned data using Pointblank package.
+Cleaned raw data files.
 
 ### Step 3 ###
 Compose paper with analysis.
