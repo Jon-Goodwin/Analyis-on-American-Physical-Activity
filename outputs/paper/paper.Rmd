@@ -39,7 +39,7 @@ Health, Physical Activity, Recreation, United States, Survey
   
   Overall we found that the state with the highest rates of Obesity was Mississipi, the lowest was Colorado and that there is a relationship between the proportion of state residents participating in recreational activities like muscle training or aerobics and the obesity rate of residents within that state.
 
-  In section \@ref(Data) we talk about the process of gathering and analyzing the dataset and the variables. Then in the \@ref(Model) section we build a linear model for the rate of obesity. Then in section \@ref(Results) we discuss the implications of the dataset presented. Finally in section \@ref(Discussion) we discuss implications for the United States citizens, as well as the weakness of the study and the further investigation that may be useful to the topic of recreational activity support and physical activity in the United States.
+  In section \@ref(Data) we talk about the process of gathering and analyzing the dataset and the variables. Then in section \@ref(Model) we build a linear model for the rate of obesity. Then in section \@ref(Results) we discuss the implications of the dataset presented. Finally in section \@ref(Discussion) we discuss implications for the United States citizens, as well as the weakness of the study and the further investigation that may be useful to the topic of recreational activity support and physical activity in the United States.
   
 
 \newpage
