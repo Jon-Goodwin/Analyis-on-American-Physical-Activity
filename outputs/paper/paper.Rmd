@@ -47,16 +47,72 @@ Health, Physical Activity, Recreation, United States, Survey
   The survey has been conducted every year for over 50 years, the sample is nationally representative, the intent of the survey is to monitor the health of the nation, as it collects information by interviewing American households. The content of the survey is updated roughly every 15-20 years with the most recent being in 2019. Of which 30,000 adults and 9,000 children were interviewed. Of this survey, this analysis focused on the information regarding the proportion of adults classified as obese or overweight, and how they responded to questions regarding aerobic activity and weight training. The data is collected from all 50 states including the District of Columbia and Peurto Rico, there is also a section included for the National averages of each question response.
   
   To compile the data set, the R language was used[@citeR], along with the packages, Pointblank [@citepointblank], haven [@citehaven], the paper was compiled using Knitr [@citeknitr] and KableExtra[@citeakableExtra] packages. Also made use of reshape2 [@citereshape2] in manipulating the data to create plots.
+  
+  Table \@ref(tab:tab1) gives a small look at the dataset.
+
+```{r tab1, echo = FALSE, fig.pos = 'H'}
+### Buidling Table Excerpt ###
+df = Data[,-1]
+names(df)[names(df) == 'YearEnd'] <- 'Year'
+names(df)[names(df) == 'LocationDesc'] <- 'State'
+names(df)[names(df) == 'Data_Value'] <- 'Percent'
+names(df)[names(df) == 'Age.years.'] <- 'Age'
+knitr::kable(head(df),booktabs = TRUE, align = "c", caption = "Excerpt of dataset") %>% 
+kable_styling(full_width = F) %>%
+kable_styling(latex_options = "hold_position")
+```
+
+  In total there are 6 characteristics from the survey being analyzed, they are:
+  
+1. "Percent of adults aged 18 years and older who have obesity"                                                                                                                                           
+2. "Percent of adults aged 18 years and older who have an overweight classification"                                                                                                                      
+3. "Percent of adults who engage in no leisure-time physical activity"                                                                                                                                    
+4. "Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)" 
+
+5. "Percent of adults who engage in muscle-strengthening activities on 2 or more days a week"                                                                                                             
+6. "Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)"
+
+These are stratified into 6 different age groups for adults, those 18-24, 25-34, 35-44, 45-54, 55-64, and 65 and older.
+
+The responses are given as a proportion of the sample, rounded to 1 digit. So the value 35.2 means, 35.2% of respondents in that age group had been affirmative to that trait in the survey.
 
 # Model {#Model}
 
+```{r model, echo = FALSE, fig.pos = 'H'}
+
+```
 # Results {#Results}
 
+  From Figure \@ref(fig:fig1) we see a chart comparing the proportion of respondents who were obese based on the different states in the country. From this table we see that the vast majority of residents from both populations receive their water via a pipe directly into their residence. This is a positive as it means these people have quick and direct access to a water source.
+
+```{r fig1, echo = FALSE, fig.cap = "Bar plot of Obesity by State"}
+### Bar plot of Obesity by State ###
+df1 <- subset(df, Year == 2011)
+df2 <- subset(df, Year == 2020)
+df1 <- subset(df1, Question == "Percent of adults aged 18 years and older who have obesity")
+df1 <- df1[order(df1$State),]
+x <- c()
+i = 1
+while (i < 312) {
+  y = mean(c(df1[i,4],df1[i+1,4],df1[i+2,4],df1[i+3,4],df1[i+4,4],df1[i+5,4]))
+  x <- c(x,y)
+  i = i+6
+}
+df_means <- cbind(unique(df1$Year),unique(df1$State), unique(df1$Question), round(x, digits = 1))
+df_means <- as.data.frame(df_means)
+df_long <- melt(df_means)
+p <- ggplot(df_long, aes(x = V2, y = V4)) + geom_bar(stat = "identity", position = "dodge") +
+  xlab("State") +
+  ylab("Percent of Population")
+
+p + coord_flip()
+```
 # Discussion {#Discussion}
 
 ## FirstPoint {#FirstPoint}
 
 ## Weaknesses and next steps
+
 
 
 \newpage

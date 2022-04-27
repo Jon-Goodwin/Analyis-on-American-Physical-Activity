@@ -27,6 +27,7 @@ df2 <- df[Columns1]
 df2 <- na.omit(df2)
 df2 <- subset(df2, LocationDesc != "Guam")
 df2 <- subset(df2, LocationDesc != "Virgin Islands")
+df2 <- subset(df2, LocationDesc != "Peurto Rico")
 
 
 ### Write csv ###
