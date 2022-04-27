@@ -80,20 +80,16 @@ The responses are given as a proportion of the sample, rounded to 1 digit. So th
 
 # Model {#Model}
 
-```{r model, echo = FALSE, fig.pos = 'H'}
-
-```
 
 \newpage
 
 # Results {#Results}
 
-  From Figure \@ref(fig:fig1) we see a chart comparing the proportion of respondents who were obese based on the different states in the country. We can see from the chart that all states lie between a rate of 20% and 35% obese.
+  From Figure \@ref(fig:fig1) we see a chart comparing the proportion of respondents who were obese based on the different states in the country. We can see from the chart that all states lie between a rate of 20% and 35% obese. The chart below is for 2011
 
 ```{r fig1, echo = FALSE, fig.cap = "Bar plot of Obesity by State", fig.width=8,fig.height=8}
 ### Bar plot of Obesity by State ###
 df1 <- subset(df, Year == 2011)
-df2 <- subset(df, Year == 2020)
 df1 <- subset(df1, Question == "Percent of adults aged 18 years and older who have obesity")
 df1 <- df1[order(df1$State),]
 x <- c()
@@ -123,11 +119,11 @@ names(df.means2)[names(df.means2) == 'V4'] <- 'Proportion'
 df.new <- cbind(df.means2$State,df.means2$Proportion)
 knitr::kable(head(df.new),booktabs = TRUE, align = "c", caption = "Excerpt of dataset") %>% 
 kable_styling(full_width = F) %>%
-kable_styling(latex_options = "hold_position")
+kable_styling(latex_options = "HOLD_position")
 ```
 
 
-And here Table \@ref(tab:tab3) gives the 6 states with the highest obesity rates.
+And here Table \@ref(tab:tab3) gives the states with the highest obesity rates.
 
 
 ```{r tab3, echo = FALSE, fig.pos = 'H'}
@@ -135,13 +131,60 @@ And here Table \@ref(tab:tab3) gives the 6 states with the highest obesity rates
 df.means3 <- df_means[order(df_means$V4, decreasing = T),]
 names(df.means3)[names(df.means3) == 'V2'] <- 'State'
 names(df.means3)[names(df.means3) == 'V4'] <- 'Proportion'
-df.new2 <- cbind(df.means2$State,df.means2$Proportion)
-knitr::kable(tail(df.new2),booktabs = TRUE, align = "c", caption = "Excerpt of dataset") %>% 
+df.new2 <- cbind(df.means3$State,df.means3$Proportion)
+knitr::kable(head(df.new2),booktabs = TRUE, align = "c", caption = "Excerpt of dataset") %>% 
 kable_styling(full_width = F) %>%
-kable_styling(latex_options = "hold_position")
+kable_styling(latex_options = "HOLD_position")
 ```
 
-The tables show that the the 
+  From these tables and the chart above we see the lowest obesity rate in the United States is Colorado with 20.1% and the highest is Mississippi with 34.6%. For this analysis we want to see whether physical activity factors such as aerobic excercise. Below in \@ref(fig:fig2) however we will briefly see how these obesity rates have changed by the end of the decade.
+
+```{r fig2, echo = FALSE, fig.cap = "Bar plot of Obesity by State", fig.width=8,fig.height=8}
+### Bar plot of Obesity by State ###
+df2 <- subset(df, Year == 2020)
+df2 <- subset(df2, Question == "Percent of adults aged 18 years and older who have obesity")
+df2 <- df2[order(df2$State),]
+x <- c()
+i = 1
+while (i < 312) {
+  y = mean(c(df2[i,4],df2[i+1,4],df2[i+2,4],df2[i+3,4],df2[i+4,4],df2[i+5,4]))
+  x <- c(x,y)
+  i = i+6
+}
+df_m <- cbind(unique(df2$Year),unique(df2$State), unique(df2$Question), round(x, digits = 1))
+df_m <- as.data.frame(df_m)
+df_l <- melt(df_m[order(df_m$V4),])
+p <- ggplot(df_l, aes(x = V2, y = as.numeric(V4), fill = V4)) +scale_y_continuous(limits = c(0,50)) + theme(legend.position="none", axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=0)) + geom_bar(width = 0.8, stat = "identity", position = 'dodge') +
+  xlab("State") +
+  ylab("Percent of Population")
+
+p + coord_flip()
+```
+
+We see from \@ref(fig:fig2) that the overall rate of obesity has clearly increased, however the states with the highest and lowest rates remain largely the same as we can see from Table \@ref(tab:tab4) and Table \@ref(tab:tab5) below.
+
+```{r tab4, echo = FALSE, fig.pos = 'H'}
+### Buidling Excerpt ###
+df.means4 <- df_m[order(df_m$V4),]
+names(df.means4)[names(df.means4) == 'V2'] <- 'State'
+names(df.means4)[names(df.means4) == 'V4'] <- 'Proportion'
+df.new4 <- cbind(df.means4$State,df.means4$Proportion)
+knitr::kable(head(df.new4),booktabs = TRUE, align = "c", caption = "Excerpt of Chart 2") %>% 
+kable_styling(full_width = F) %>%
+kable_styling(latex_options = "HOLD_position")
+```
+
+```{r tab5, echo = FALSE, fig.pos = 'H'}
+### Buidling Excerpt ###
+df.means5 <- df_m[order(df_m$V4, decreasing = T),]
+names(df.means5)[names(df.means5) == 'V2'] <- 'State'
+names(df.means5)[names(df.means5) == 'V4'] <- 'Proportion'
+df.new5 <- cbind(df.means5$State,df.means5$Proportion)
+knitr::kable(head(df.new5),booktabs = TRUE, align = "c", caption = "Excerpt of dataset") %>% 
+kable_styling(full_width = F) %>%
+kable_styling(latex_options = "HOLD_position")
+```
+
 \newpage
 
 # Discussion {#Discussion}
