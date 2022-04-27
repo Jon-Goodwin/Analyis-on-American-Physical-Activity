@@ -412,11 +412,17 @@ The interesting thing here is we see Montana and Vermont both with very high rat
 # Discussion {#Discussion}
 
 ## FirstPoint {#FirstPoint}
-
-  According to [@citeMuscle] "meeting both aerobic and muscle-strengthening exercise guidelines was associated with a lower obesity prevalence, and associations were more pronounced for higher obesity classes." We found similar section \@ref(Results). However we also noted in the model that muscle training and aerobic activities did not fully explain the obesity problems of the United States. Suggesting that while physical activity may be important it is not the entire explanation for the increasing rates of obesity.[@citeNutrition]
+  
+  According to [@citeMuscle] "meeting both aerobic and muscle-strengthening exercise guidelines was associated with a lower obesity prevalence, and associations were more pronounced for higher obesity classes." We found similar section \@ref(Results). However we also noted in the model that muscle training and aerobic activities did not fully explain the obesity problems of the United States. Suggesting that while physical activity may be important it is not the entire explanation for the increasing rates of obesity. Research suggest Americans currently consume too many calories, saturated fats, trans fasts and added sugars.[@citeNutrition].
+  
+  The CDC notes that the solution to obesity in the United States is not simple [@citeCentre]. The CDC notes the solutions are a healthy lifestyle, combining physical activity with healthy eating. They provide plans like the MyPlate Plan to help United States citizens plan their meals and exercise to ensure they are meeting health recommendations.
+  
+  Some State's have implemented more directly punitive measures to curb obesity, Sugar tax and other so called 'sin taxes' have been implemented in cities such as Philadelphia, Boulder, Colorado, and Berkeley, California [@citeusnews] and according to The American Public Health Association these taxes results in a 21% drop in consumption of sugary drinks in Berkeley [@citeTax]. However in past efforts to cap the availability of junk foods and sodas has been struck down by United States courts. Famously in New York City's ban on large quantity soda's was fought in court and ultimately defeated [@citeNYT], with help in no small part to the soft drink industry spending millions on ad campaigns. Industries built around sugary foods and drinks are large and will fight against measures which may reduce the consumption of their products.
+  
+  
 ## Weaknesses and next steps
 
-  Although this analysis found some links between aerobic activity and muscle training to rates of obesity in the United States. It is clear that there is more to the story of obesity in the United States then just the level of physical activity. Next steps for analysis would be researching diet along with excercise. Data in this area in the last 2 years during the pandemic would also be particularly interesting. Particularly in comparing states which had more restricted access to public fitness facilities like gyms and public parks compared to those states which did not employ as strict restrictions, re-opened earlier, or states like Montana which had less population density and more opportunity to open air fitness training compared to densely populated states such as New York.
+  Although this analysis found some links between aerobic activity and muscle training to rates of obesity in the United States. It is clear that there is more to the story of obesity in the United States then just the level of physical activity. Next steps for analysis would be researching diet along with exercise. Data in this area in the last 2 years during the pandemic would also be particularly interesting. Particularly in comparing states which had more restricted access to public fitness facilities like gyms and public parks compared to those states which did not employ as strict restrictions, re-opened earlier, or states like Montana which had less population density and more opportunity to open air fitness training compared to densely populated states such as New York.
 
 
 \newpage
@@ -471,6 +477,8 @@ The interesting thing here is we see Montana and Vermont both with very high rat
 	- None of the data is of a sensitive nature.
 16. *Any other comments?*
 	- No.
+
+\newpage
 
 **Collection process**
 
