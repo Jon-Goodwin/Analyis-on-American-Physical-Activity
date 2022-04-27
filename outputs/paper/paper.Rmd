@@ -39,7 +39,7 @@ Health, Physical Activity, Recreation, United States, Survey
   
   Overall we found that the state with the highest rates of Obesity was Mississipi, the lowest was Colorado and that there is a relationship between the proportion of state residents participating in recreational activities like muscle training or aerobics and the obesity rate of residents within that state.
 
-  In section \@ref(Data) we talk about the process of gathering and analyzing the dataset and the variables. Then in section \@ref(Results) we discuss the implications of the dataset presented. Finally in section \@ref(Discussion) we discuss implications for the United States citizens, as well as the weakness of the study and the further investigation that may be useful to the topic of recreational activity support and physical activity in the United States.
+  In section \@ref(Data) we talk about the process of gathering and analyzing the dataset and the variables. Then in the \@ref(Model) section we build a linear model for the rate of obesity. Then in section \@ref(Results) we discuss the implications of the dataset presented. Finally in section \@ref(Discussion) we discuss implications for the United States citizens, as well as the weakness of the study and the further investigation that may be useful to the topic of recreational activity support and physical activity in the United States.
   
 
 \newpage
@@ -86,7 +86,9 @@ The responses are given as a proportion of the sample, rounded to 1 digit. So th
 
   The model being used is $\text{Obesity}=\beta_{\text{Intercept}}+\beta_{\text{150min of Aerobics}}\times (\text{150min of Aerobics or more})+\beta_{\text{Muscle Training}}\times (\text{Muscle Training})$. Where the beta coefficients represent the change in the predictor variables, 150min or more of Aerobics, and Muscle Training, have on the result, being the obesity rate. This model was chosen since other factors like no aerobic activity or 300min or more of aerobic activity were unsuprisingly highly correlated with the 150min of aerobics.
   
-  Figure \@ref(fig:fig5) shows the relationship between 150min of Aerobics training and Muscle Training compared to the rate of Obesity.
+  Both Muscle Training and 150min of Aerobic Training had significant p-values in this model of 0.0236 and 0.0027 respectively. Below Figure \@ref(fig:fig5) shows the relationship between 150min of Aerobics training and Muscle Training compared to the rate of Obesity. There was strong positive correlation to people with 300min of aerobic training, and those who did muscle training or 150min of aerobic training so including that interaction was not beneficial. Additionally those that do no aerobic training at all are strongly negatively correlated with those that do 150min or more. Soi including that interaction was not beneficial to the model.
+  
+  Our data does not have any particularly large outliers that would disturb the model present. And our outcome variable, the proportion of residents who are obese is a continuous variable, thus the bilinear model seems the best choice.
 
 
 ```{r fig5, echo = FALSE, fig.cap = "Obesity vs 150min of Aerobics", fig.width=5,fig.height=5}
@@ -180,6 +182,12 @@ ggplot(mapping = aes(x = Aerobics_150min, y = Obesity))+geom_point()+xlab("150mi
   ylab("Obesity Rate")
 ```
 
+And below Figure \@ref(fig:fig6) shows us the relationship between the rate of obesity and the proportion of a states residents participating in muscle training excercises.
+
+```{r fig6, echo = FALSE, fig.cap = "Obesity vs Muscle Training", fig.width=5,fig.height=5}
+ggplot(mapping = aes(x = Muscle, y = Obesity))+geom_point()+xlab("Muscle") +
+  ylab("Obesity Rate")
+```
 
 
 
@@ -188,7 +196,7 @@ ggplot(mapping = aes(x = Aerobics_150min, y = Obesity))+geom_point()+xlab("150mi
 
 # Results {#Results}
 
-  From Figure \@ref(fig:fig1) we see a chart comparing the proportion of respondents who were obese based on the different states in the country. We can see from the chart that all states lie between a rate of 20% and 35% obese. The chart below is for 2011
+  From Figure \@ref(fig:fig1) we see a chart comparing the proportion of respondents who were obese based on the different states in the country. We can see from the chart that all states lie between a rate of 20% and 35% obese. The chart below is for 2011.
 
 ```{r fig1, echo = FALSE, fig.cap = "Bar plot of Obesity by State", fig.width=8,fig.height=8}
 ### Bar plot of Obesity by State ###
@@ -287,6 +295,8 @@ knitr::kable(head(df.new5),booktabs = TRUE, align = "c", caption = "Excerpt of d
 kable_styling(full_width = F) %>%
 kable_styling(latex_options = "HOLD_position")
 ```
+
+   Using our model from the 
 
 \newpage
 
