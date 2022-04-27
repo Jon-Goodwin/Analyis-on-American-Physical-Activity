@@ -5,7 +5,7 @@
 # Contact: jon.goodwin@mail.utoronto.ca
 
 library(tidyverse)
-Set.seed(1)
+set.seed(1)
 
 ### Simulating dataset ###
 raw_data <- readr::read_csv("inputs/data/raw_data.csv"
