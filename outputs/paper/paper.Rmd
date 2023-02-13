@@ -17,6 +17,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message= FALSE, fig.pos = 'H
 library(tidyverse)
 library(kableExtra)
 library(reshape2)
+library(here)
 ```
 ```{r, echo = F}
 ### Reading CSV and setting seed###
@@ -212,10 +213,10 @@ df_means <- cbind(unique(df1$Year),unique(df1$State), unique(df1$Question), roun
 df_means <- as.data.frame(df_means)
 df_long <- melt(df_means[order(df_means$V4),])
 p <- ggplot(df_long, aes(x = V2, y = as.numeric(V4), fill = V4)) +scale_y_continuous(limits = c(0,35)) + theme(legend.position="none", axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=0)) + geom_bar(width = 0.8, stat = "identity", position = 'dodge') +
-  xlab("State") +
+  xlab("State")
   ylab("Percent of Population")
 
-p + coord_flip()
+p + coord_flip() + xlab(NULL)
 ```
 
 Below Table \@ref(tab:tab2), shows the states with the lowest proportions of obesity.
