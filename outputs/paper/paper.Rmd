@@ -1,15 +1,22 @@
 ---
 title: "Analysis of Physical Activity Survey(2022)"
-author: 
-  - Jonathan Goodwin
-date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "Recreational activity and physical fitness are important factors in determining the health and safety of a society. We obtain data regarding the activity of individuals of different states and age groups as well as their respective distance to a park. We find that citizens who live closer to parks are more likely to be physically active, and that younger citizens are more likely to be physically active then older ones. These findings have implications for the future development of public recreational structures."
-header-includes:
-  - \usepackage{float}
-  - \floatplacement{figure}{H}
+author: "Jonathan Goodwin"
+date: "2022 March 7"
 output:
-  bookdown::pdf_document2
-toc: FALSE
+  html_document: default
+  bookdown: default
+  pdf_document: default
+header-includes:
+- \usepackage{float}
+- \floatplacement{figure}{H}
+abstract: Recreational activity and physical fitness are important factors in determining
+  the health and safety of a society. We obtain data regarding the activity of individuals
+  of different states and age groups as well as their respective distance to a park.
+  We find that citizens who live closer to parks are more likely to be physically
+  active, and that younger citizens are more likely to be physically active then older
+  ones. These findings have implications for the future development of public recreational
+  structures.
+toc: no
 bibliography: references.bib
 ---
 ```{r setup, include=FALSE,warning = FALSE, message = FALSE}
@@ -197,7 +204,7 @@ ggplot(mapping = aes(x = Muscle, y = Obesity))+geom_point()+xlab("Muscle") +
 
   From Figure \@ref(fig:fig1) we see a chart comparing the proportion of respondents who were obese based on the different states in the country. We can see from the chart that all states lie between a rate of 20% and 35% obese. The chart below is for 2011.
 
-```{r fig1, echo = FALSE, fig.cap = "Bar plot of Obesity by State", fig.width=8,fig.height=8}
+```{r fig1, echo = FALSE, fig.cap = "Bar plot of Obesity by State", fig.width=8,fig.height=8, messages = FALSE}
 ### Bar plot of Obesity by State ###
 df1 <- subset(df, Year == 2011)
 df1 <- subset(df1, Question == "Percent of adults aged 18 years and older who have obesity")
@@ -212,14 +219,19 @@ while (i < 312) {
 df_means <- cbind(unique(df1$Year),unique(df1$State), unique(df1$Question), round(x, digits = 1))
 df_means <- as.data.frame(df_means)
 df_long <- melt(df_means[order(df_means$V4),])
-p <- ggplot(df_long, aes(x = V2, y = as.numeric(V4), fill = V4)) +scale_y_continuous(limits = c(0,35)) + theme(legend.position="none", axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=0)) + geom_bar(width = 0.8, stat = "identity", position = 'dodge') +
-  xlab("State")
-  ylab("Percent of Population")
+p <- ggplot(df_long, aes(x = V2, y = as.numeric(V4), fill = V4)) +
+  scale_y_continuous(limits = c(0,35)) + 
+  theme(legend.position="none", axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=0)) + 
+  geom_bar(width = 0.8, stat = "identity", position = 'dodge') +
+  xlab("") +
+  ylab("Percent of Population") +
+  coord_flip()
 
-p + coord_flip() + xlab(NULL)
+p
 ```
 
 Below Table \@ref(tab:tab2), shows the states with the lowest proportions of obesity.
+And Table \@ref(tab:tab3) gives the states with the highest obesity rates.
 
 ```{r tab2, echo = FALSE, fig.pos = 'H'}
 ### Buidling Excerpt ###
@@ -228,12 +240,9 @@ names(df.means2)[names(df.means2) == 'V2'] <- 'State'
 names(df.means2)[names(df.means2) == 'V4'] <- 'Proportion'
 df.new <- cbind(df.means2$State,df.means2$Proportion)
 knitr::kable(head(df.new),booktabs = TRUE, align = "c", caption = "Lowest Obesity Rates By State") %>% 
-kable_styling(full_width = F) %>%
+kable_styling(full_width = F, position = "float_left") %>%
 kable_styling(latex_options = "HOLD_position")
 ```
-
-
-And here Table \@ref(tab:tab3) gives the states with the highest obesity rates.
 
 
 ```{r tab3, echo = FALSE, fig.pos = 'H'}
@@ -243,7 +252,7 @@ names(df.means3)[names(df.means3) == 'V2'] <- 'State'
 names(df.means3)[names(df.means3) == 'V4'] <- 'Proportion'
 df.new2 <- cbind(df.means3$State,df.means3$Proportion)
 knitr::kable(head(df.new2),booktabs = TRUE, align = "c", caption = "Highest Obesity Rates by State") %>% 
-kable_styling(full_width = F) %>%
+kable_styling(full_width = F, position = "left") %>%
 kable_styling(latex_options = "HOLD_position")
 ```
 
@@ -265,7 +274,7 @@ df_m <- cbind(unique(df2$Year),unique(df2$State), unique(df2$Question), round(x,
 df_m <- as.data.frame(df_m)
 df_l <- melt(df_m[order(df_m$V4),])
 p <- ggplot(df_l, aes(x = V2, y = as.numeric(V4), fill = V4)) +scale_y_continuous(limits = c(0,50)) + theme(legend.position="none", axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=0)) + geom_bar(width = 0.8, stat = "identity", position = 'dodge') +
-  xlab("State") +
+  xlab("") +
   ylab("Percent of Population")
 
 p + coord_flip()
@@ -280,7 +289,7 @@ names(df.means4)[names(df.means4) == 'V2'] <- 'State'
 names(df.means4)[names(df.means4) == 'V4'] <- 'Proportion'
 df.new4 <- cbind(df.means4$State,df.means4$Proportion)
 knitr::kable(head(df.new4),booktabs = TRUE, align = "c", caption = "Lowest Rates of Obesity by State") %>% 
-kable_styling(full_width = F) %>%
+kable_styling(full_width = F, position = "float_left") %>%
 kable_styling(latex_options = "HOLD_position")
 ```
 
@@ -291,7 +300,7 @@ names(df.means5)[names(df.means5) == 'V2'] <- 'State'
 names(df.means5)[names(df.means5) == 'V4'] <- 'Proportion'
 df.new5 <- cbind(df.means5$State,df.means5$Proportion)
 knitr::kable(head(df.new5),booktabs = TRUE, align = "c", caption = "Highest Rates of Obesity by State") %>% 
-kable_styling(full_width = F) %>%
+kable_styling(full_width = F, position = "left") %>%
 kable_styling(latex_options = "HOLD_position")
 ```
 
@@ -369,7 +378,7 @@ names(df8.means4)[names(df8.means4) == 'V2'] <- 'State'
 names(df8.means4)[names(df8.means4) == 'V4'] <- 'Proportion'
 df8.new4 <- cbind(df8.means4$State,df8.means4$Proportion)
 knitr::kable(head(df8.new4),booktabs = TRUE, align = "c", caption = "States with Lowest rates of Aerobic training") %>% 
-kable_styling(full_width = F) %>%
+kable_styling(full_width = F, position = "float_left") %>%
 kable_styling(latex_options = "HOLD_position")
 ```
 
@@ -380,7 +389,7 @@ names(df8.means5)[names(df8.means5) == 'V2'] <- 'State'
 names(df8.means5)[names(df8.means5) == 'V4'] <- 'Proportion'
 df8.new5 <- cbind(df8.means5$State,df8.means5$Proportion)
 knitr::kable(head(df8.new5),booktabs = TRUE, align = "c", caption = "States with Highest rates of Aerobic training") %>% 
-kable_styling(full_width = F) %>%
+kable_styling(full_width = F, position = "left") %>%
 kable_styling(latex_options = "HOLD_position")
 ```
 
@@ -393,7 +402,7 @@ names(df8.means6)[names(df8.means6) == 'V2'] <- 'State'
 names(df8.means6)[names(df8.means6) == 'V4'] <- 'Proportion'
 df8.new6 <- cbind(df8.means6$State,df8.means6$Proportion)
 knitr::kable(head(df8.new6),booktabs = TRUE, align = "c", caption = "States with Lowest rates of Muscle Training") %>% 
-kable_styling(full_width = F) %>%
+kable_styling(full_width = F, position = "float_left") %>%
 kable_styling(latex_options = "HOLD_position")
 ```
 
@@ -404,7 +413,7 @@ names(df8.means7)[names(df8.means7) == 'V2'] <- 'State'
 names(df8.means7)[names(df8.means7) == 'V4'] <- 'Proportion'
 df8.new7 <- cbind(df8.means7$State,df8.means7$Proportion)
 knitr::kable(head(df8.new7),booktabs = TRUE, align = "c", caption = "States with Highest rates of Muscle training") %>% 
-kable_styling(full_width = F) %>%
+kable_styling(full_width = F, position = "left") %>%
 kable_styling(latex_options = "HOLD_position")
 ```
 The interesting thing here is we see Montana and Vermont both with very high rates of Aerobic Activity, likely attributed to these states being far more rural then the average state, allowing more opportunity for outdoor activities. However again on the low end 
