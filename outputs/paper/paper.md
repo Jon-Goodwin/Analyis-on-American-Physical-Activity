@@ -20,20 +20,8 @@ abstract: Recreational activity and physical fitness are important factors in de
 toc: no
 bibliography: references.bib
 ---
-```{r setup, include=FALSE,warning = FALSE, message = FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message= FALSE, fig.pos = 'H')
-library(tidyverse)
-library(kableExtra)
-library(reshape2)
-library(here)
-```
-```{r, echo = F}
-### Reading CSV and setting seed###
-set.seed(1)
-Data <- 
-  read.csv(here::here("outputs/data/cleaned_physical_activity.csv"))
-Data1 <- read.csv(here::here("outputs/data/cleaned_walk_or_bike.csv"))
-```
+
+
 
 # Keywords: 
 Health, Physical Activity, Recreation, United States, Survey
@@ -63,17 +51,62 @@ Health, Physical Activity, Recreation, United States, Survey
   
   Table \@ref(tab:tab1) gives a small look at the dataset.
 
-```{r tab1, echo = FALSE, fig.pos = 'H'}
-### Buidling Table Excerpt ###
-df = Data[,-1]
-names(df)[names(df) == 'YearEnd'] <- 'Year'
-names(df)[names(df) == 'LocationDesc'] <- 'State'
-names(df)[names(df) == 'Data_Value'] <- 'Percent'
-names(df)[names(df) == 'Age.years.'] <- 'Age'
-knitr::kable(head(df),booktabs = TRUE, align = "c", caption = "Excerpt of dataset") %>% 
-kable_styling(full_width = F) %>%
-kable_styling(latex_options = "hold_position")
-```
+<table class="table table" style="width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;">
+<caption>Excerpt of dataset</caption>
+ <thead>
+  <tr>
+   <th style="text-align:center;"> Year </th>
+   <th style="text-align:center;"> State </th>
+   <th style="text-align:center;"> Question </th>
+   <th style="text-align:center;"> Percent </th>
+   <th style="text-align:center;"> Age </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> 2011 </td>
+   <td style="text-align:center;"> Alabama </td>
+   <td style="text-align:center;"> Percent of adults aged 18 years and older who have obesity </td>
+   <td style="text-align:center;"> 35.2 </td>
+   <td style="text-align:center;"> 25 - 34 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 2011 </td>
+   <td style="text-align:center;"> National </td>
+   <td style="text-align:center;"> Percent of adults who engage in no leisure-time physical activity </td>
+   <td style="text-align:center;"> 16.9 </td>
+   <td style="text-align:center;"> 18 - 24 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 2016 </td>
+   <td style="text-align:center;"> Virginia </td>
+   <td style="text-align:center;"> Percent of adults aged 18 years and older who have an overweight classification </td>
+   <td style="text-align:center;"> 40.1 </td>
+   <td style="text-align:center;"> 35 - 44 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 2016 </td>
+   <td style="text-align:center;"> Washington </td>
+   <td style="text-align:center;"> Percent of adults who engage in no leisure-time physical activity </td>
+   <td style="text-align:center;"> 18.8 </td>
+   <td style="text-align:center;"> 55 - 64 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 2016 </td>
+   <td style="text-align:center;"> Alabama </td>
+   <td style="text-align:center;"> Percent of adults aged 18 years and older who have an overweight classification </td>
+   <td style="text-align:center;"> 35.3 </td>
+   <td style="text-align:center;"> 55 - 64 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 2011 </td>
+   <td style="text-align:center;"> National </td>
+   <td style="text-align:center;"> Percent of adults who engage in no leisure-time physical activity </td>
+   <td style="text-align:center;"> 22.1 </td>
+   <td style="text-align:center;"> 25 - 34 </td>
+  </tr>
+</tbody>
+</table>
 
   In total there are 6 characteristics from the survey being analyzed, they are:
   
@@ -100,103 +133,11 @@ The responses are given as a proportion of the sample, rounded to 1 digit. So th
   Our data does not have any particularly large outliers that would disturb the model present. And our outcome variable, the proportion of residents who are obese is a continuous variable, thus the bilinear model seems the best choice.
 
 
-```{r fig5, echo = FALSE, fig.cap = "Obesity vs 150min of Aerobics", fig.width=5,fig.height=5}
-### Obesity Rate by State 2011 ###
-df1 <- subset(df, Year == 2011)
-df1 <- subset(df1, Question == "Percent of adults aged 18 years and older who have obesity")
-df1 <- df1[order(df1$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df1[i,4],df1[i+1,4],df1[i+2,4],df1[i+3,4],df1[i+4,4],df1[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df_means <- cbind(unique(df1$Year),unique(df1$State), unique(df1$Question), round(x, digits = 1))
-df_means <- as.data.frame(df_means)
-
-###### Forming dataframe for no aerobic activity
-
-df_no_leisure <- subset(df, Year == 2011)
-df_no_leisure <- subset(df_no_leisure, Question == "Percent of adults who engage in no leisure-time physical activity")
-df_no_leisure <- df_no_leisure[order(df_no_leisure$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df_no_leisure[i,4],df_no_leisure[i+1,4],df_no_leisure[i+2,4],df_no_leisure[i+3,4],df_no_leisure[i+4,4],df_no_leisure[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df_means_no <- cbind(unique(df_no_leisure$Year),unique(df_no_leisure$State), unique(df_no_leisure$Question), round(x, digits = 1))
-df_means_no <- as.data.frame(df_means_no)
-
-### Forming dataframe for >150min aerobic activity
-
-df_150 <- subset(df, Year == 2011)
-df_150 <- subset(df_150, Question == "Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)")
-df_150 <- df_150[order(df_150$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df_150[i,4],df_150[i+1,4],df_150[i+2,4],df_150[i+3,4],df_150[i+4,4],df_150[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df_means_150 <- cbind(unique(df_150$Year),unique(df_150$State), unique(df_150$Question), round(x, digits = 1))
-df_means_150 <- as.data.frame(df_means_150)
-### Dataframe for muscle strengthening
-df_muscle <- subset(df, Year == 2011)
-df_muscle <- subset(df_muscle, Question == "Percent of adults who engage in muscle-strengthening activities on 2 or more days a week")
-df_muscle <- df_muscle[order(df_muscle$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df_muscle[i,4],df_muscle[i+1,4],df_muscle[i+2,4],df_muscle[i+3,4],df_muscle[i+4,4],df_muscle[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df_means_muscle <- cbind(unique(df_muscle$Year),unique(df_muscle$State), unique(df_muscle$Question), round(x, digits = 1))
-df_means_muscle <- as.data.frame(df_means_muscle)
-
-### Dataframe for >300min of aerobic activity
-
-df_300 <- subset(df, Year == 2011)
-df_300 <- subset(df_300, Question == "Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)")
-df_300 <- df_300[order(df_300$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df_300[i,4],df_300[i+1,4],df_300[i+2,4],df_300[i+3,4],df_300[i+4,4],df_300[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df_means_300 <- cbind(unique(df_300$Year),unique(df_300$State), unique(df_300$Question), round(x, digits = 1))
-df_means_300 <- as.data.frame(df_means_300)
-
-### Linear Model
-
-dat.m <- as.data.frame(cbind(df_means$V4,df_means_no$V4,df_means_300$V4,df_means_150$V4,df_means_muscle$V4))
-names(dat.m)[names(dat.m) == 'V1'] <- "Obesity"
-names(dat.m)[names(dat.m) == 'V2'] <- "No"
-names(dat.m)[names(dat.m) == 'V3'] <- "300mins"
-names(dat.m)[names(dat.m) == 'V4'] <- "150min"
-names(dat.m)[names(dat.m) == 'V5'] <- "Muscle"
-Obesity <- as.numeric(as.vector(dat.m$Obesity))
-No_Aerobics <- as.numeric(as.vector(dat.m$No))
-Aerobics_300min <- as.numeric(as.vector(dat.m$`300mins`))
-Aerobics_150min <- as.numeric(as.vector(dat.m$`150min`))
-Muscle <- as.numeric(as.vector(dat.m$Muscle))
-mod1 <- lm(Obesity~Aerobics_150min+Muscle)
-ggplot(mapping = aes(x = Aerobics_150min, y = Obesity))+geom_point()+xlab("150min or more of Aerobics") +
-  ylab("Obesity Rate")
-```
+![Obesity vs 150min of Aerobics](paper_files/figure-html/fig5-1.png)
 
 And below Figure \@ref(fig:fig6) shows us the relationship between the rate of obesity and the proportion of a states residents participating in muscle training excercises.
 
-```{r fig6, echo = FALSE, fig.cap = "Obesity vs Muscle Training", fig.width=5,fig.height=5}
-ggplot(mapping = aes(x = Muscle, y = Obesity))+geom_point()+xlab("Muscle") +
-  ylab("Obesity Rate")
-```
+![Obesity vs Muscle Training](paper_files/figure-html/fig6-1.png)
 
 
 \newpage
@@ -205,218 +146,262 @@ ggplot(mapping = aes(x = Muscle, y = Obesity))+geom_point()+xlab("Muscle") +
 
   From Figure \@ref(fig:fig1) we see a chart comparing the proportion of respondents who were obese based on the different states in the country. We can see from the chart that all states lie between a rate of 20% and 35% obese. The chart below is for 2011.
 
-```{r fig1, echo = FALSE, fig.cap = "Bar plot of Obesity by State", fig.width=8,fig.height=8, messages = FALSE}
-### Bar plot of Obesity by State ###
-df1 <- subset(df, Year == 2011)
-df1 <- subset(df1, Question == "Percent of adults aged 18 years and older who have obesity")
-df1 <- df1[order(df1$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df1[i,4],df1[i+1,4],df1[i+2,4],df1[i+3,4],df1[i+4,4],df1[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df_means <- cbind(unique(df1$Year),unique(df1$State), unique(df1$Question), round(x, digits = 1))
-df_means <- as.data.frame(df_means)
-df_long <- melt(df_means[order(df_means$V4),])
-p <- ggplot(df_long, aes(x = V2, y = as.numeric(V4), fill = V4)) +
-  scale_y_continuous(limits = c(0,35)) + 
-  theme(legend.position="none", axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=0)) + 
-  geom_bar(width = 0.8, stat = "identity", position = 'dodge') +
-  xlab("") +
-  ylab("Percent of Population") +
-  coord_flip()
-
-p
-```
+![Bar plot of Obesity by State](paper_files/figure-html/fig1-1.png)
 
 Below Table \@ref(tab:tab2), shows the states with the lowest proportions of obesity.
 And Table \@ref(tab:tab3) gives the states with the highest obesity rates.
 
-```{r tab2, echo = FALSE, fig.pos = 'H'}
-### Buidling Excerpt ###
-df.means2 <- df_means[order(df_means$V4),]
-names(df.means2)[names(df.means2) == 'V2'] <- 'State'
-names(df.means2)[names(df.means2) == 'V4'] <- 'Proportion'
-df.new <- cbind(df.means2$State,df.means2$Proportion)
-knitr::kable(head(df.new),booktabs = TRUE, align = "c", caption = "Lowest Obesity Rates By State") %>% 
-kable_styling(full_width = F, position = "float_left") %>%
-kable_styling(latex_options = "HOLD_position")
-```
+<table class="table table" style="width: auto !important; float: left; margin-right: 10px; margin-left: auto; margin-right: auto;">
+<caption>Lowest Obesity Rates By State</caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> Colorado </td>
+   <td style="text-align:center;"> 20.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Hawaii </td>
+   <td style="text-align:center;"> 21.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Massachusetts </td>
+   <td style="text-align:center;"> 22.2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> New Jersey </td>
+   <td style="text-align:center;"> 23 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> California </td>
+   <td style="text-align:center;"> 23.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> District of Columbia </td>
+   <td style="text-align:center;"> 23.8 </td>
+  </tr>
+</tbody>
+</table>
 
 
-```{r tab3, echo = FALSE, fig.pos = 'H'}
-### Buidling Excerpt ###
-df.means3 <- df_means[order(df_means$V4, decreasing = T),]
-names(df.means3)[names(df.means3) == 'V2'] <- 'State'
-names(df.means3)[names(df.means3) == 'V4'] <- 'Proportion'
-df.new2 <- cbind(df.means3$State,df.means3$Proportion)
-knitr::kable(head(df.new2),booktabs = TRUE, align = "c", caption = "Highest Obesity Rates by State") %>% 
-kable_styling(full_width = F, position = "left") %>%
-kable_styling(latex_options = "HOLD_position")
-```
+<table class="table table" style="width: auto !important;  margin-left: auto; margin-right: auto;">
+<caption>Highest Obesity Rates by State</caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> Mississippi </td>
+   <td style="text-align:center;"> 34.6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Louisiana </td>
+   <td style="text-align:center;"> 32.9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> West Virginia </td>
+   <td style="text-align:center;"> 31.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Alabama </td>
+   <td style="text-align:center;"> 31.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Oklahoma </td>
+   <td style="text-align:center;"> 30.9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Arkansas </td>
+   <td style="text-align:center;"> 30.8 </td>
+  </tr>
+</tbody>
+</table>
 
   From these tables and the chart above we see the lowest obesity rate in the United States is Colorado with 20.1% and the highest is Mississippi with 34.6%. For this analysis we want to see whether physical activity factors such as aerobic excercise. Below in \@ref(fig:fig2) however we will briefly see how these obesity rates have changed by the end of the decade.
 
-```{r fig2, echo = FALSE, fig.cap = "Bar plot of Obesity by State", fig.width=8,fig.height=8}
-### Bar plot of Obesity by State ###
-df2 <- subset(df, Year == 2019)
-df2 <- subset(df2, Question == "Percent of adults aged 18 years and older who have obesity")
-df2 <- df2[order(df2$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df2[i,4],df2[i+1,4],df2[i+2,4],df2[i+3,4],df2[i+4,4],df2[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df_m <- cbind(unique(df2$Year),unique(df2$State), unique(df2$Question), round(x, digits = 1))
-df_m <- as.data.frame(df_m)
-df_l <- melt(df_m[order(df_m$V4),])
-p <- ggplot(df_l, aes(x = V2, y = as.numeric(V4), fill = V4)) +scale_y_continuous(limits = c(0,50)) + theme(legend.position="none", axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=0)) + geom_bar(width = 0.8, stat = "identity", position = 'dodge') +
-  xlab("") +
-  ylab("Percent of Population")
-
-p + coord_flip()
-```
+![Bar plot of Obesity by State](paper_files/figure-html/fig2-1.png)
 
 We see from \@ref(fig:fig2) that the overall rate of obesity has clearly increased, however the states with the highest and lowest rates remain largely the same as we can see from Table \@ref(tab:tab4) and Table \@ref(tab:tab5) below.
 
-```{r tab4, echo = FALSE, fig.pos = 'H'}
-### Buidling Excerpt ###
-df.means4 <- df_m[order(df_m$V4),]
-names(df.means4)[names(df.means4) == 'V2'] <- 'State'
-names(df.means4)[names(df.means4) == 'V4'] <- 'Proportion'
-df.new4 <- cbind(df.means4$State,df.means4$Proportion)
-knitr::kable(head(df.new4),booktabs = TRUE, align = "c", caption = "Lowest Rates of Obesity by State") %>% 
-kable_styling(full_width = F, position = "float_left") %>%
-kable_styling(latex_options = "HOLD_position")
-```
+<table class="table table" style="width: auto !important; float: left; margin-right: 10px; margin-left: auto; margin-right: auto;">
+<caption>Lowest Rates of Obesity by State</caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> Colorado </td>
+   <td style="text-align:center;"> 23.2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> District of Columbia </td>
+   <td style="text-align:center;"> 24.6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Massachusetts </td>
+   <td style="text-align:center;"> 24.8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Hawaii </td>
+   <td style="text-align:center;"> 25.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> California </td>
+   <td style="text-align:center;"> 25.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Florida </td>
+   <td style="text-align:center;"> 26.1 </td>
+  </tr>
+</tbody>
+</table>
 
-```{r tab5, echo = FALSE, fig.pos = 'H'}
-### Buidling Excerpt ###
-df.means5 <- df_m[order(df_m$V4, decreasing = T),]
-names(df.means5)[names(df.means5) == 'V2'] <- 'State'
-names(df.means5)[names(df.means5) == 'V4'] <- 'Proportion'
-df.new5 <- cbind(df.means5$State,df.means5$Proportion)
-knitr::kable(head(df.new5),booktabs = TRUE, align = "c", caption = "Highest Rates of Obesity by State") %>% 
-kable_styling(full_width = F, position = "left") %>%
-kable_styling(latex_options = "HOLD_position")
-```
+<table class="table table" style="width: auto !important;  margin-left: auto; margin-right: auto;">
+<caption>Highest Rates of Obesity by State</caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> Mississippi </td>
+   <td style="text-align:center;"> 40.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> West Virginia </td>
+   <td style="text-align:center;"> 39.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Arkansas </td>
+   <td style="text-align:center;"> 37.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Oklahoma </td>
+   <td style="text-align:center;"> 36.9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Kentucky </td>
+   <td style="text-align:center;"> 36.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Tennessee </td>
+   <td style="text-align:center;"> 36.1 </td>
+  </tr>
+</tbody>
+</table>
 
-```{r, echo = FALSE}
-### Obesity Rate by State 2020 ###
-df8 <- subset(df, Year == 2019)
-df8 <- subset(df8, Question == "Percent of adults aged 18 years and older who have obesity")
-df8 <- df8[order(df8$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df8[i,4],df8[i+1,4],df8[i+2,4],df8[i+3,4],df8[i+4,4],df8[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df8_means <- cbind(unique(df8$Year),unique(df8$State), unique(df8$Question), round(x, digits = 1))
-df8_means <- as.data.frame(df8_means)
 
-###### Forming dataframe for no aerobic activity
-
-df8_no_leisure <- subset(df, Year == 2019)
-df8_no_leisure <- subset(df8_no_leisure, Question == "Percent of adults who engage in no leisure-time physical activity")
-df8_no_leisure <- df8_no_leisure[order(df8_no_leisure$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df8_no_leisure[i,4],df8_no_leisure[i+1,4],df8_no_leisure[i+2,4],df8_no_leisure[i+3,4],df8_no_leisure[i+4,4],df8_no_leisure[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df8_means_no <- cbind(unique(df8_no_leisure$Year),unique(df8_no_leisure$State), unique(df8_no_leisure$Question), round(x, digits = 1))
-df8_means_no <- as.data.frame(df8_means_no)
-
-### Forming dataframe for >150min aerobic activity
-
-df8_150 <- subset(df, Year == 2019)
-df8_150 <- subset(df8_150, Question == "Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)")
-df8_150 <- df8_150[order(df8_150$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df8_150[i,4],df8_150[i+1,4],df8_150[i+2,4],df8_150[i+3,4],df8_150[i+4,4],df8_150[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df8_means_150 <- cbind(unique(df8_150$Year),unique(df8_150$State), unique(df8_150$Question), round(x, digits = 1))
-df8_means_150 <- as.data.frame(df8_means_150)
-
-### Dataframe for muscle strengthening
-df8_muscle <- subset(df, Year == 2019)
-df8_muscle <- subset(df8_muscle, Question == "Percent of adults who engage in muscle-strengthening activities on 2 or more days a week")
-df8_muscle <- df8_muscle[order(df8_muscle$State),]
-x <- c()
-i = 1
-while (i < 312) {
-  y = mean(c(df8_muscle[i,4],df8_muscle[i+1,4],df8_muscle[i+2,4],df8_muscle[i+3,4],df8_muscle[i+4,4],df8_muscle[i+5,4]))
-  x <- c(x,y)
-  i = i+6
-}
-df8_means_muscle <- cbind(unique(df8_muscle$Year),unique(df8_muscle$State), unique(df8_muscle$Question), round(x, digits = 1))
-df8_means_muscle <- as.data.frame(df8_means_muscle)
-### Test
-df.final <- as.data.frame(cbind(df8_means$V2,df8_means$V4,df8_means_150$V4,df8_means_muscle$V4))
-Obesity_2019 <- as.numeric(as.vector(df.final$V2))
-Aerobics_150min_2019 <- as.numeric(as.vector(df.final$V3))
-Muscle_2019 <- as.numeric(as.vector(df.final$V4))
-Prediction = 50.5349415+(-0.2690727)*Aerobics_150min_2019+(-0.3223630)*Muscle_2019
-```
 
 Below we now look at the proportion of state residents participating in aerobic activities for 150min or more per week as well as the proportion of residents participating in muscle strength training for at least 2 hours per week. We see in Table \@ref(tab:tab10) and Table \@ref(tab:tab11) some familiar states from the Obesity rate Tables \@ref(tab:tab4) and Table \@ref(tab:tab5). Namely Alabama which was one of the highest rates for Obesity in the country also has low rates of Aerobic activity.
-```{r tab10, echo = FALSE, fig.pos = 'H'}
-### Buidling Excerpt ###
-df8.means4 <- df8_means_150[order(df8_means_150$V4),]
-names(df8.means4)[names(df8.means4) == 'V2'] <- 'State'
-names(df8.means4)[names(df8.means4) == 'V4'] <- 'Proportion'
-df8.new4 <- cbind(df8.means4$State,df8.means4$Proportion)
-knitr::kable(head(df8.new4),booktabs = TRUE, align = "c", caption = "States with Lowest rates of Aerobic training") %>% 
-kable_styling(full_width = F, position = "float_left") %>%
-kable_styling(latex_options = "HOLD_position")
-```
+<table class="table table" style="width: auto !important; float: left; margin-right: 10px; margin-left: auto; margin-right: auto;">
+<caption>States with Lowest rates of Aerobic training</caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> Kentucky </td>
+   <td style="text-align:center;"> 36.9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Oklahoma </td>
+   <td style="text-align:center;"> 38.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Mississippi </td>
+   <td style="text-align:center;"> 39.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Missouri </td>
+   <td style="text-align:center;"> 45.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Louisiana </td>
+   <td style="text-align:center;"> 45.9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Alabama </td>
+   <td style="text-align:center;"> 46.1 </td>
+  </tr>
+</tbody>
+</table>
 
-```{r tab11, echo = FALSE, fig.pos = 'H'}
-### Buidling Excerpt ###
-df8.means5 <- df8_means_150[order(df8_means_150$V4, decreasing = T),]
-names(df8.means5)[names(df8.means5) == 'V2'] <- 'State'
-names(df8.means5)[names(df8.means5) == 'V4'] <- 'Proportion'
-df8.new5 <- cbind(df8.means5$State,df8.means5$Proportion)
-knitr::kable(head(df8.new5),booktabs = TRUE, align = "c", caption = "States with Highest rates of Aerobic training") %>% 
-kable_styling(full_width = F, position = "left") %>%
-kable_styling(latex_options = "HOLD_position")
-```
+<table class="table table" style="width: auto !important;  margin-left: auto; margin-right: auto;">
+<caption>States with Highest rates of Aerobic training</caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> Montana </td>
+   <td style="text-align:center;"> 63 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Vermont </td>
+   <td style="text-align:center;"> 61.8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Colorado </td>
+   <td style="text-align:center;"> 59.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Washington </td>
+   <td style="text-align:center;"> 58.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Minnesota </td>
+   <td style="text-align:center;"> 58.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Alaska </td>
+   <td style="text-align:center;"> 57.5 </td>
+  </tr>
+</tbody>
+</table>
 
 We now look at muscle training in Tables \@ref(tab:tab12) and Table \@ref(tab:tab13). Here we see many of the low obesity rate states from earlier, like Colorado, Florida and the District of Columbia.
 
-```{r tab12, echo = FALSE, fig.pos = 'H'}
-### Buidling Excerpt ###
-df8.means6 <- df8_means_muscle[order(df8_means_muscle$V4),]
-names(df8.means6)[names(df8.means6) == 'V2'] <- 'State'
-names(df8.means6)[names(df8.means6) == 'V4'] <- 'Proportion'
-df8.new6 <- cbind(df8.means6$State,df8.means6$Proportion)
-knitr::kable(head(df8.new6),booktabs = TRUE, align = "c", caption = "States with Lowest rates of Muscle Training") %>% 
-kable_styling(full_width = F, position = "float_left") %>%
-kable_styling(latex_options = "HOLD_position")
-```
+<table class="table table" style="width: auto !important; float: left; margin-right: 10px; margin-left: auto; margin-right: auto;">
+<caption>States with Lowest rates of Muscle Training</caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> West Virginia </td>
+   <td style="text-align:center;"> 27.5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Kentucky </td>
+   <td style="text-align:center;"> 28.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Missouri </td>
+   <td style="text-align:center;"> 28.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Oklahoma </td>
+   <td style="text-align:center;"> 29.2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Mississippi </td>
+   <td style="text-align:center;"> 29.8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Alabama </td>
+   <td style="text-align:center;"> 30 </td>
+  </tr>
+</tbody>
+</table>
 
-```{r tab13, echo = FALSE, fig.pos = 'H'}
-### Buidling Excerpt ###
-df8.means7 <- df8_means_muscle[order(df8_means_muscle$V4, decreasing = T),]
-names(df8.means7)[names(df8.means7) == 'V2'] <- 'State'
-names(df8.means7)[names(df8.means7) == 'V4'] <- 'Proportion'
-df8.new7 <- cbind(df8.means7$State,df8.means7$Proportion)
-knitr::kable(head(df8.new7),booktabs = TRUE, align = "c", caption = "States with Highest rates of Muscle training") %>% 
-kable_styling(full_width = F, position = "left") %>%
-kable_styling(latex_options = "HOLD_position")
-```
+<table class="table table" style="width: auto !important;  margin-left: auto; margin-right: auto;">
+<caption>States with Highest rates of Muscle training</caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> Montana </td>
+   <td style="text-align:center;"> 40.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> District of Columbia </td>
+   <td style="text-align:center;"> 40.2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Connecticut </td>
+   <td style="text-align:center;"> 39.8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Vermont </td>
+   <td style="text-align:center;"> 39.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Colorado </td>
+   <td style="text-align:center;"> 39.6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Florida </td>
+   <td style="text-align:center;"> 38.8 </td>
+  </tr>
+</tbody>
+</table>
 The interesting thing here is we see Montana and Vermont both with very high rates of Aerobic Activity, likely attributed to these states being far more rural then the average state, allowing more opportunity for outdoor activities. However again on the low end 
 \newpage
 
