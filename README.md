@@ -1,4 +1,8 @@
-Analyis of CDC data on American Physical Activity.
+# Analyis of CDC data on American Physical Activity.
+
+### Note: 
+Navigate [here](https://github.com/Jon-Goodwin/Analyis-on-American-Physical-Activity/blob/main/outputs/paper/paper.md)
+For a preview in github, unfortunately some package figures do not render.
 
 ## Summary:
 An analysis of the responses to the National Health Interview Survey regarding physical activity and fitness across the United States.
